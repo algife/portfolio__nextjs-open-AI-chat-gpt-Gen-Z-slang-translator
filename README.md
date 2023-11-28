@@ -12,7 +12,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## To-do
 
 - [x] Create the repository using git-flow and initialize the Next.js 14 project.
-- [ ] Make a "Translator" UI with Tailwind.
+- [x] Make a "Translator" UI with Tailwind.
 - [ ] Integrate the logic with OpenAI with an injected prompt to generate an equivalent Gen-Z speech.
 
 ## Getting Started
