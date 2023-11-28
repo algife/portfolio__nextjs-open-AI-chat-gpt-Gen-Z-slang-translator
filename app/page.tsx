@@ -1,11 +1,11 @@
 import Hero from "@/components/hero/hero";
-import TranslateBlock from "@/components/TranslateBlock";
+import TranscriptionBlock from "@/components/TranscriptionBlock";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between pt-24">
+    <main className=" max-w-[1024px] flex flex-col items-center pt-20 w-full padding-x mx-auto">
       <Hero />
-      <TranslateBlock />
+      <TranscriptionBlock />
     </main>
   );
 }

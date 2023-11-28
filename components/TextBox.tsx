@@ -1,5 +1,5 @@
 "use client";
-import { ChangeEventHandler } from "react";
+import { ChangeEvent, ChangeEventHandler } from "react";
 
 type Props = {
   textTypeTitle: string;
@@ -12,20 +12,29 @@ export default function TextBox({
   text,
   onChange,
 }: Props) {
+  const id = `textbox--${Math.random()}`;
+
+  const handleChangeAndResize = (e: ChangeEvent<HTMLTextAreaElement>) => {
+    // 1. Handle onchange event
+    onChange(e);
+
+    // 2. Resize to fit content's height
+    const myDiv = document.getElementById(id)!;
+    myDiv.style.height = "auto";
+    myDiv.style.height = `${myDiv.scrollHeight}px`;
+  };
+
   return (
-    <div className="relative flex flex-col w-full h-full m-0 p-0">
-      <h4 className="mx-auto text-center mb-2 text-xl ">{textTypeTitle}:</h4>
-      <div className="relative mb-12 lg:mb-0 lg:grid-cols-2 m-0 p-0">
-        <div className="relative bg-[hsla(0,0%,100%,0.9)] backdrop-blur-[25px] backdrop-saturate-[200%] block rounded-lg m-0 p-4 shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-[hsla(0,0%,15%,0.9)] dark:shadow-black/20">
-          <textarea
-            className="w-full h-full bg-transparent rounded border-0 p-0 m-0 outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-300 motion-reduce:transition-none"
-            rows={7}
-            value={text}
-            contentEditable={true}
-            onChange={onChange}
-          />
-        </div>
-      </div>
+    <div className="relative w-full flex flex-col m-0 p-0">
+      <h4 className="mx-auto text-center  text-xl">{textTypeTitle}:</h4>
+      <textarea
+        id={id}
+        className="rounded-lg border-0 mt-2 p-2 outline-none bg-[hsla(0,0%,100%,0.9)] block shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] dark:bg-[hsla(0,0%,15%,0.9)] dark:shadow-black/20 font-medium text-gray-400 dark:text-gray-400 text-sm"
+        rows={6}
+        value={text}
+        contentEditable={true}
+        onChange={handleChangeAndResize}
+      />
     </div>
   );
 }
