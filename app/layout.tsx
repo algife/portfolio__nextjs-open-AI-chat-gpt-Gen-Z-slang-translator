@@ -6,7 +6,7 @@ import Navbar from "@/components/navbar/navbar";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Z-Linguist | Gen-Z slang translator for marketing teams.",
+  title: "ZLinguist | Gen-Z slang translator for marketing teams.",
   description:
     "Targeting a Gen-Z audience? Flex with your marketing game by matching their talk and vibing with their squad 💬🚀 #YoLo.",
 };

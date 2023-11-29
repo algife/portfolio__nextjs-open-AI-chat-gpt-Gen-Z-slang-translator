@@ -1,3 +1,5 @@
+export const USE_RAPIDAPI_WRAPPER = true;
+
 export const heroData = {
   inputBoxTitle: "Original",
   outputBoxTitle: "Gen-Z",

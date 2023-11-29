@@ -36,7 +36,7 @@ export default function Navbar() {
           {/* <!-- Navbar Brand --> */}
           <a className="text-primary dark:text-primary-400" href="#!">
             <span className="[&>svg]:ml-2 [&>svg]:mr-3 [&>svg]:h-6 [&>svg]:w-6 [&>svg]:lg:ml-0">
-              Z-Linguist
+              ZLinguist
             </span>
           </a>
         </div>

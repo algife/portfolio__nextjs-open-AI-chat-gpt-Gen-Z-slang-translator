@@ -1,6 +1,6 @@
-# Z-Linguist: Gen-Z Slang Translator
+# ZLinguist: Gen-Z Slang Translator
 
-Available publicly at [Z-linguist site](https://gen-z-slang-translate.vercel.app)
+Available publicly at [ZLinguist site](https://zlinguist.vercel.app)
 
 > Transform your speech into Gen-z slang and viceversa and optimize your marketing efforts for this target audience.
 

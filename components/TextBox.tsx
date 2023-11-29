@@ -1,5 +1,5 @@
 "use client";
-import { ChangeEvent, ChangeEventHandler } from "react";
+import { ChangeEvent, ChangeEventHandler, FocusEventHandler } from "react";
 
 type Props = {
   textTypeTitle: string;
@@ -8,11 +8,11 @@ type Props = {
 };
 
 export default function TextBox({
-  textTypeTitle = "Text",
+  textTypeTitle = "Message",
   text,
   onChange,
 }: Props) {
-  const id = `textbox--${Math.random()}`;
+  const id = `textbox--${textTypeTitle.toLowerCase().replace(" ", "-")}`;
 
   const handleChangeAndResize = (e: ChangeEvent<HTMLTextAreaElement>) => {
     // 1. Handle onchange event
